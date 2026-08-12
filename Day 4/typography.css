@@ -1,3 +1,12 @@
+div{
+    color: rgb(214, 214, 238);
+    font-size: 24px;
+    width: 400px;
+    height: 3%;
+    border-radius: 10px;
+    background-color: #173b0e;
+}
+
 .div1{
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
