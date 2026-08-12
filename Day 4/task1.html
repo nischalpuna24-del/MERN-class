@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        background-color: antiquewhite;
+        text-align: right;
+      }
+
+      h3 {
+        background-color: rgb(223, 205, 240);
+        text-align: center;
+      }
+
+      p {
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: bolder;
+        font-style: italic;
+      }
+
+      /* Using Class Selectors */
+
+      /* .p1 {
+        color: cadetblue;
+        background-color: antiquewhite;
+        text-align: center;
+      }
+
+      .p2 {
+        color: rgb(223, 191, 191);
+        background-color: blue;
+      }
+
+      .p3 {
+        color: aquamarine;
+        background-color: black;
+        text-align: right;
+      } */
+
+      /* Using Pseudo Selectors */
+
+      p:nth-child(1) {
+        color: red;
+      }
+
+      p:nth-child(2) {
+        color: blue;
+      }
+
+      p:nth-child(3) {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Hello from H1</h1>
+      <h3>Hello from H3</h3>
+      <p>Lorem ipsum dolor sit.</p>
+    </div>
+    <div>
+      <h1>Hello from H1</h1>
+      <h3>Hello from H3</h3>
+      <p>Lorem ipsum dolor sit.</p>
+    </div>
+
+    <div>
+      <p class="p1">Paragraph 1 for styling.</p>
+      <p class="p2">Paragraph 2 for styling.</p>
+      <p class="p3">Paragraph 3 for styling.</p>
+    </div>
+    <div>
+      <p class="p1">Paragraph 1 for styling.</p>
+      <p class="p2">Paragraph 2 for styling.</p>
+      <p class="p3">Paragraph 3 for styling.</p>
+    </div>
+  </body>
+</html>
