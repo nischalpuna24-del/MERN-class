@@ -1,0 +1,42 @@
+/* element selector */
+h2{
+    color: #333;
+    background-color: #c56060;
+}
+
+/* class selector */
+.pcontainer {
+    color: #333;
+    font-size: 20px;
+    background-color: #bb3ae2;
+}
+
+/* id selector */
+#uniqueDiv{
+    color: #333;
+    font-size: 20px;
+    background-color: #3ae2bb;
+}
+
+/* universal selector */
+*{
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* pseudo-class selector */
+a:link{
+    color: #3ae2bb;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #bb3ae2;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #bb3ae2;
+    text-decoration: underline;
+}
+
