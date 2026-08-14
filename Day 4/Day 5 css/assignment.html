@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assignment</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 3px solid black;
+            border-radius: 30px;
+            background-color: white;
+            text-align: center;
+        }
+
+        /* Image section */
+        .image {
+            border: 4px solid black;
+            border-radius: 30px;
+            padding: auto;
+            margin-left: 50px;
+            margin-right: 80px;
+            margin-bottom: 30px;
+        }
+
+        .image img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid black;
+        }
+
+        /* Name + Circle */
+        .name-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .name {
+            width: 80%;
+            border: 3px solid black;
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .name h3 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            border: 3px solid black;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circle img {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* Description */
+        .description {
+            border: 3px solid black;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 25px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .description p {
+            margin: 0;
+        }
+
+        /* Button */
+        button {
+            padding: 12px 25px;
+            border: 3px solid black;
+            border-radius: 30px;
+            background-color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: chartreuse;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Assignment</h1>
+
+    <main class="container">
+
+        <!-- Image -->
+        <div class="image">
+            <img src="/images.jpg" alt="Ram Gurung">
+        </div>
+
+        <!-- Name and Circle -->
+        <div class="name-section">
+
+            <div class="name">
+                <h3>Ram Gurung</h3>
+            </div>
+
+            <div class="circle">
+                <img src="/icons8-message-48.png" alt="Message">
+            </div>
+
+        </div>
+
+        <!-- Description -->
+        <div class="description">
+            <p>
+                I am a web developer. Hope to make you better websites.
+            </p>
+        </div>
+
+        <!-- Button -->
+        <button type="button">
+            Get My Info
+        </button>
+
+    </main>
+
+</body>
+</html>
