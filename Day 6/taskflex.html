@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+
+    <style>
+        body {
+            background-color: rgb(221, 238, 222);
+            margin: 0;
+        }
+
+        header {
+            background-color: rgb(0, 70, 128);
+            height: 60px;
+        }
+
+        nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        .logo {
+            margin-right: auto;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        li {
+            list-style: none;
+            color: white;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            text-decoration: underline;
+        }
+
+        .login,
+        .register {
+            margin-left: 20px;
+        }
+
+        .login img,
+        .register img {
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                <img src="/images.jpg" alt="Logo">
+            </div>
+
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+
+            <div class="login">
+                <img src="/icons8-login-96.png" alt="Login">
+            </div>
+
+            <div class="register">
+                <img src="/icons8-register-96.png" alt="Register">
+            </div>
+
+        </nav>
+    </header>
+
+</body>
+</html>
