@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 100%;
+            height: 500px;
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "header header header"
+            "nav nav nav"
+            "section section aside"
+            "article article aside"
+            "footer footer footer";
+            /* place-content: center; */
+        }
+        .box {
+            text-align: center;
+            border: 2px solid black;
+            width: 100%;
+            background-color: rgb(153, 236, 209);
+        }
+        .box1 {
+            grid-area: header;
+        }
+        .box2 {
+            grid-area: nav;
+        }
+        .box3 {
+            grid-area: section;
+        }
+        .box4 {
+            grid-area: aside;
+        }
+        .box5 {
+            grid-area: article;
+        }
+        .box6 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">Header</div>
+        <div class="box box2 ">NavBar</div>
+        <div class="box box3">Section</div>
+        <div class="box box4">aside</div>
+        <div class="box box5">Article</div>
+        <div class="box box6">Footer</div>
+    </div>
+</body>
+</html>
