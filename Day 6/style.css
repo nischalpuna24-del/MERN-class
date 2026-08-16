@@ -11,20 +11,12 @@ body {
 }
 
 
-/* ========================================
-   MAIN CONTAINER
-======================================== */
-
 .signup-container {
     width: 100%;
     min-height: 100vh;
     display: flex;
 }
 
-
-/* ========================================
-   LEFT SECTION
-======================================== */
 
 .left-section {
     width: 49.5%;
@@ -38,8 +30,6 @@ body {
 }
 
 
-/* LOGO */
-
 .logo {
     margin-top: 145px;
 
@@ -48,8 +38,6 @@ body {
     font-weight: 700;
 }
 
-
-/* ILLUSTRATION */
 
 .illustration {
     width: 390px;
@@ -71,8 +59,6 @@ body {
     object-fit: cover;
 }
 
-
-/* WELCOME CONTENT */
 
 .welcome-content {
     width: 390px;
@@ -99,9 +85,6 @@ body {
     max-width: 360px;
     margin: 0 auto;
 }
-
-
-/* SLIDER */
 
 .slider {
     display: flex;
@@ -131,11 +114,6 @@ body {
     border-radius: 10px;
 }
 
-
-/* ========================================
-   RIGHT SECTION
-======================================== */
-
 .right-section {
     width: 50.5%;
     min-height: 100vh;
@@ -147,16 +125,12 @@ body {
 }
 
 
-/* FORM CONTAINER */
-
 .form-container {
     width: 494px;
 
     margin-top: 140px;
 }
 
-
-/* WELCOME TEXT */
 
 .welcome-text {
     font-size: 17px;
@@ -167,9 +141,6 @@ body {
     margin-bottom: 24px;
 }
 
-
-/* TITLE */
-
 .form-container h1 {
     font-size: 24px;
     font-weight: 700;
@@ -179,17 +150,9 @@ body {
     margin-bottom: 47px;
 }
 
-
-/* ========================================
-   FORM
-======================================== */
-
 .form-group {
     margin-bottom: 21px;
 }
-
-
-/* LABEL */
 
 .form-group label {
     display: block;
@@ -201,9 +164,6 @@ body {
 
     margin-bottom: 10px;
 }
-
-
-/* INPUT */
 
 .form-group input {
     width: 100%;
@@ -225,11 +185,6 @@ body {
 .form-group input:focus {
     border-color: #2eaaa2;
 }
-
-
-/* ========================================
-   TERMS
-======================================== */
 
 .terms {
     display: flex;
@@ -266,11 +221,6 @@ body {
     text-decoration: underline;
 }
 
-
-/* ========================================
-   SIGN UP BUTTON
-======================================== */
-
 button {
     width: 140px;
     height: 39px;
@@ -291,11 +241,6 @@ button:hover {
     background-color: #267f7f;
 }
 
-
-/* ========================================
-   LOGIN TEXT
-======================================== */
-
 .login-text {
     margin-top: 18px;
 
@@ -315,11 +260,6 @@ button:hover {
 .login-text a:hover {
     color: #2eaaa2;
 }
-
-
-/* ========================================
-   RESPONSIVE
-======================================== */
 
 @media (max-width: 1000px) {
 
