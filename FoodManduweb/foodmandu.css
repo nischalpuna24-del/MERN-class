@@ -31,7 +31,6 @@ main .hero {
     background-image: url('/images/fast-food-isometric-set_1284-21631.avif');
     background-repeat: no-repeat;
     background-size: cover;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +38,20 @@ main .hero {
 }
 
 .hero h1 {
-    font-size: normal;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: rgb(59, 59, 59);
 
+}
+
+.hero input {
+    height: 38px;
+}
+
+.hero button {
+    background-color: yellow;
+    width: 70pxpx;
+    height: 50px;
 }
 
 .hero input {
@@ -51,4 +62,21 @@ main .hero {
 .order h6 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+}
+
+.order image {
+    height: 50px;
+}
+
+.items h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    max-width: 50%;
+    height: fit-content;
+    gap: 10;
 }
