@@ -110,6 +110,14 @@ hr {
     transform: scale(1.05);
 }
 
-.aboutus {
-    background-image: url('/images/sushi.jpg') ;
+.about {
+    width: 100%;
+    height: 209px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url("/images/sushi.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
 }
