@@ -6,7 +6,13 @@ header nav {
 }
 
 header {
-    box-shadow: 0px 0px 2px 2px rgb(224, 202, 202) ;
+    box-shadow: 0px 0px 2px 2px rgb(224, 202, 202);
+}
+
+nav image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav button {
@@ -15,14 +21,14 @@ nav button {
     padding: 10px 25px;
     outline: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: antiquewhite;
 }
 
 main .hero {
     height: 100vh;
     border: 2px solid grey;
-    background-image: url('/images/main.jpg');
+    background-image: url('/images/fast-food-isometric-set_1284-21631.avif');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -31,11 +37,18 @@ main .hero {
     align-items: center;
     flex-direction: column;
 }
+
 .hero h1 {
     font-size: normal;
-    
+
 }
+
 .hero input {
     padding: 7px 10px;
     width: 40vh;
+}
+
+.order h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
