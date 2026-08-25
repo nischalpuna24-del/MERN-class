@@ -48,7 +48,7 @@ console.log("Array");
 
 // map, filter, reduce
 
-let arr = [1, 2, 3, 4, 5,98]
+// let arr = [1, 2, 3, 4, 5,98]
 
 // Calls a defined callback function on each element of an array, and returns an array that contains the results.
 // let new_arr = arr.map((value)=> {
@@ -65,8 +65,34 @@ let arr = [1, 2, 3, 4, 5,98]
 // console.log(filtere_data)
 
 // Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
-let acc_value = arr.reduce((acc, val)=>{
-    return acc  + val
-}, 0)
+// let acc_value = arr.reduce((acc, val)=>{
+//     return acc  + val
+// }, 0)
 
-console.log(acc_value)
+// console.log(acc_value)
+
+// let arr = [{id:1, value:1}, {id:2, value:1}]
+
+// let a = arr.find((ele)=>{
+//     return ele===2
+// })
+
+// console.log(a)
+
+// Determines whether the specified callback function returns true for any element of an array.
+// let a = arr.some((ele)=>{
+//     return ele>4
+// })
+// console.log(a)
+
+
+// destructuring and spread operators
+
+let arr = [1,2,3,4,5,6,7,8]
+
+let [a,b,,c] = arr //destructuring
+console.log(a,b,c)
+
+let arr2 = [...arr] // spread
+console.log(arr2.pop(), arr2)
+console.log(arr)
