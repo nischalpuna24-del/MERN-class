@@ -88,11 +88,11 @@ console.log("Array");
 
 // destructuring and spread operators
 
-let arr = [1,2,3,4,5,6,7,8]
+// let arr = [1,2,3,4,5,6,7,8]
 
-let [a,b,,c] = arr //destructuring
-console.log(a,b,c)
+// let [a,b,,c] = arr //destructuring
+// console.log(a,b,c)
 
-let arr2 = [...arr] // spread
-console.log(arr2.pop(), arr2)
-console.log(arr)
+// let arr2 = [...arr] // spread
+// console.log(arr2.pop(), arr2)
+// console.log(arr)
