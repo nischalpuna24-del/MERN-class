@@ -1,77 +1,82 @@
-// let container = document.querySelector(".container")
-// let boxcontainer = document.querySelector(".boxcontainer")
+// let container =  document.querySelector(".container")
+// let boxContainer = document.querySelector(".boxContainer")
 // let box = document.querySelector(".box")
 
-// container.addEventListener("click",()=>{
-//     alert("I am a cotianer")
+// container.addEventListener("click", ()=>{
+//     alert("i am a container")
 // })
-
-// boxcontainer.addEventListener("click",()=>{
-//     alert("I am a box-cotianer")
+// boxContainer.addEventListener("click", ()=>{
+//     alert("i am a box-container")
 // })
-// box.addEventListenercontainer.addEventListener("click",(e)=>{
+// box.addEventListener("click", (e)=>{
 //     e.stopPropagation()
-//     alert("I am a cotianer")
+//     alert("i am a box")
 // })
 
-// let uksername = document.querySelector("input")
+
+// form validation
+
+// let username = document.querySelector("input")
 // let form = document.querySelector("form")
 // let span = document.querySelector("span")
 
-// const usernameRegex =/^[A-Za-z]{3,}$/;
+// const usernameRegex = /^[A-Za-z]{3,}$/;
 
 // form.addEventListener("submit", (e)=>{
 //     e.preventDefault()
 //     console.dir(username.value)
 
-//     if(!usernameRegex,test(username.value))
-//         return span.innerText = "Username is invlaid"
+//     if(!usernameRegex.test(username.value))
+//         return span.innerText = "Username is invalid!"
+    
 
 //     span.innerText = ""
 //     username.value = ""
 // })
 
+
 // timers and intervals
-// setTimeout and setInterval
+// setTimeout and setIntervals
 
 // setTimeout(()=>{
-//     alert("Hello from set timeout ")
-// }, 2000)
+//     console.log("hello from settimerout")
+// }, 5000) //1sec
+
 
 // let interval = setInterval(() => {
-//     console.log("From the interval")
+//     console.log("from the se interval")
 // }, 2000);
 
 // clearInterval(interval)
 
-// let count = 10;
+// let count = 10
+
 // let interval = setInterval(() => {
-//   if (count >= 1) {
-//     count--;
-//     console.log(count);
-//   } else {
-//     clearInterval(interval);
-//   }
+//     if(count>=1){
+//         count--
+//         console.log(count)
+//     }else{
+//         clearInterval(interval)
+//     }
 // }, 1000);
 
-// downloading file progress bar
-let progress = document.querySelector("#pro");
-let percentageText = document.querySelector("#text-pct");
-let btn = document.querySelector("#btn");
-let count = 0;
+// downlaoding file progress bar
 
+let progress = document.querySelector("#progress-bar")
+let count = 0
+let btn = document.querySelector("#download-btn")
 
 let interval = setInterval(() => {
-  if (count < 100) {
-    count++;
+    if(count<100){
+        count++
+        progress.style.width = `${count}%`
+        progress.innerHTML = `${count}%`
 
-    progress.style.width = `${count}%`;
-    percentageText.innerHTML = `${count}%`;
-  } else {
-    clearInterval(interval);
+    }else{
+        btn.innerHTML = "Download Completed"
+        btn.style.backgroundColor = "green"
+        clearInterval(interval)
+    }
+}, 10000/100);
 
-    // Fixed structural syntax variables
-    btn.innerHTML = "Download Completed";
-    // btn.style.backgroundColor = "Green";
-  }
-}, 30);
+

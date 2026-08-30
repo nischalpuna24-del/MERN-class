@@ -1,71 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Progress Bar</title>
     <style>
-        /* Centers everything on the screen */
+        /* CSS STYLING */
         body {
+            font-family: Arial, sans-serif;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: sans-serif;
-            background: #fdfdfd;
+            background-color: #f4f4f4;
         }
-        /* Blue pill download button */
-        .btn {
-            background: #1e7eff;
+
+        .container {
+            text-align: center;
+            width: 300px;
+        }
+
+        #download-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
             color: white;
             border: none;
-            padding: 12px 40px;
-            font-size: 18px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease; /* Smooth color swap */
         }
-        /* Gray progress bar container */
-        .track {
-            width: 320px;
-            background: #e6e6e6;
-            height: 30px;
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden; /* Keeps the filling rounded inside the border */
+
+        #download-btn:hover {
+            background-color: #0056b3;
         }
-        /* Blue moving indicator inside the track */
-        .fill {
-            height: 100%;
-            width: 0%; /* Starts at 0% */
-            background-color: #1e7eff;
-            border-radius: 15px;
-            transition: width 0.05s linear;
+
+        /* Progress Bar Container */
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin-top: 15px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
         }
-        /* White text aligned inside the bar */
-        .text {
+
+        /* The actual progress bar */
+        #progress-bar {
+            width: 0%;
+            height: 20px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 20px;
             color: white;
-            position: absolute;
-            left: 15px;
-            top: 6px;
-            font-weight: bold;
-            font-size: 14px;
-            mix-blend-mode: difference; /* Makes text visible against gray and blue */
+            transition: width 0.2s ease;
         }
     </style>
 </head>
 <body>
 
-    <!-- Added id="btn" to match your JavaScript selector -->
-    <button class="btn" id="btn">Downloading File</button>
+<div class="container">
+    <button id="download-btn">Downloading File...</button>
     
-    <div class="track">
-        <!-- Added id="pro" for the filler bar element -->
-        <div class="fill" id="pro"></div>
-        <span class="text" id="text-pct">0%</span>
+    <div class="progress-container">
+        <div id="progress-bar">0%</div>
     </div>
+</div>
 
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
