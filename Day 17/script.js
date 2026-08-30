@@ -54,9 +54,24 @@
 //   }
 // }, 1000);
 
-
 // downloading file progress bar
+let progress = document.querySelector("#pro");
+let percentageText = document.querySelector("#text-pct");
+let btn = document.querySelector("#btn");
+let count = 0;
 
-let interval = setInertval(()=> {
 
-}, 3000)
+let interval = setInterval(() => {
+  if (count < 100) {
+    count++;
+
+    progress.style.width = `${count}%`;
+    percentageText.innerHTML = `${count}%`;
+  } else {
+    clearInterval(interval);
+
+    // Fixed structural syntax variables
+    btn.innerHTML = "Download Completed";
+    // btn.style.backgroundColor = "Green";
+  }
+}, 30);

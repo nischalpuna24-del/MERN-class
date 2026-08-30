@@ -1,98 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download File Card</title>
     <style>
-        /* ==================== CSS STYLING ==================== */
-        
-        /* Reset basic margins and center everything on the screen */
+        /* Centers everything on the screen */
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            background: #fdfdfd;
         }
-
-        /* Card layout container */
-        .download-container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-
-        .download-container h2 {
-            color: #333333;
-            margin-bottom: 10px;
-        }
-
-        .download-container p {
-            color: #666666;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        /* Styled download button */
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #007bff;
-            color: #ffffff;
-            text-decoration: none; /* Removes the underline from link */
-            padding: 14px 28px;
-            font-size: 16px;
-            font-weight: 600;
+        /* Blue pill download button */
+        .btn {
+            background: #1e7eff;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            font-size: 18px;
             border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth color swap */
         }
-
-        /* SVG icon styling */
-        .download-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
+        /* Gray progress bar container */
+        .track {
+            width: 320px;
+            background: #e6e6e6;
+            height: 30px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden; /* Keeps the filling rounded inside the border */
         }
-
-        /* Interactive states */
-        .download-btn:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+        /* Blue moving indicator inside the track */
+        .fill {
+            height: 100%;
+            width: 0%; /* Starts at 0% */
+            background-color: #1e7eff;
+            border-radius: 15px;
+            transition: width 0.05s linear;
         }
-
-        .download-btn:active {
-            transform: translateY(0);
+        /* White text aligned inside the bar */
+        .text {
+            color: white;
+            position: absolute;
+            left: 15px;
+            top: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            mix-blend-mode: difference; /* Makes text visible against gray and blue */
         }
     </style>
 </head>
 <body>
 
-    <!-- ==================== HTML STRUCTURE ==================== -->
-    <div class="download-container">
-        <h2>Your File is Ready</h2>
-        <p>Click the button below to start downloading your document.</p>
-        
-        <!-- 
-          NOTE: Replace "path/to/your/file.pdf" with your actual file path.
-          Replace "custom-filename.pdf" with what you want the saved file to be named.
-        -->
-        <a href="path/to/your/file.pdf" download="custom-filename.pdf" class="download-btn">
-            <svg class="download-icon" xmlns="http://w3.org" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M4 19H20V21H4V19M13 9H18L12 15L6 9H11V3H13V9Z"/>
-            </svg>
-            Download File
-        </a>
+    <!-- Added id="btn" to match your JavaScript selector -->
+    <button class="btn" id="btn">Downloading File</button>
+    
+    <div class="track">
+        <!-- Added id="pro" for the filler bar element -->
+        <div class="fill" id="pro"></div>
+        <span class="text" id="text-pct">0%</span>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
