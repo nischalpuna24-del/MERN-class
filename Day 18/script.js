@@ -1,105 +1,150 @@
-console.log("Day 18 OOP");
-
-// let bricks1 = {
-//     name: "abc",
-//     color: 'red',
-//     qty: 10
-// }
-
-// let bricks2 = {
-//     name: "abc",
-//     color: 'orange',
-//     qty: 30
-// }
-
-// let bricks3 = {
-//     name: "abc",
-//     color: 'green',
-//     qty: 50
-// }
-
-// let bricks4 = {
-//     name: "abc",
-//     color: 'red',
-//     qty: 10
-// }
-
-// let bricks5 = {
-//     name: "abc",
-//     color: 'red',
-//     qty: 10
-// }
+console.log("day 18 oop");
 
 // class and object
-// class --> blueprint
-// // object --> instance - created from class
+// class -> blueprint
+// object -> instance - crated from class
 
-// class BricksFacotry {
+// class BricksFactory{
 //     constructor(name, qty, color){
 //         this.name = name
-//         this.qyt = qty
+//         this.qty = qty
 //         this.color = color
 
-//         console.log({name:this.name,qty:this.qty,color:this.color})
+//         console.log({name:this.name, qty:this.qty, color:this.color})
 //     }
 
 //     // methods
-//     getQuantity() {
+//     getQuantity(){
 //         return this.qty
 //     }
 
-//     setQuantity(value) {
+//     setQuantity(value){
 //         return this.qty = value
 //     }
 // }
 
-// let b1 = new BricksFacotry("abc",30,"red")
-// let b2 = new BricksFacotry("abc",30,"green")
-// let b3 = new BricksFacotry("abc",30,"blue")
+// let b1 = new BricksFactory("abc", 6,'red')
+// let b2 = new BricksFactory("xyz", 10, 'orange')
+// let b3 = new BricksFactory("apple", 20, "green")
 
-// // Inhertitance
-// class Animal {
-//   constructor(name) {
-//     this.name = name;
-//   }
-//   eat() {
-//     console.log("eating...");
-//   }
+// b1.getQuantity()
+
+// inheritence
+// class Animal{
+
+//     constructor(name){
+//         this.name = name
+//     }
+//     eat(){
+//         console.log("eating...")
+//     }
 // }
 
 // // let a1 = new Animal()
 
-// class Dog extends Animal {
-//   constructor(name, age) {
-//     super(name);
-//     this.age = age;
-//   }
-//   eat() {
-//     console.log("dog is eating");
-//   }
+// class Dog extends Animal{
+//     constructor(name, age){
+//         super(name)
+//         this.age = age
+//     }
+//     eat(){
+//         console.log("dog is eating")
+//     }
+
 // }
 
-// let d1 = new Dog("tommy", 13);
+// let d1 = new Dog("tommy", 13)
 
 // async / sync js
 
+// async function hello() {
+//   console.log(1);
+//   console.log(2);
 
-console.log(1)
-console.log(2)
+//   await setTimeout(() => {
+//     console.log(3);
+//   }, 2000);
+//   console.log(4);
+// }
 
-// setTimeout(() => {
-//   console.log(3)
-// }, 2000)
-
-console.log(4)
+// hello();
 
 // callbacks
 
-function greet(value,cb) {
-    console.log(value)
-    cb()
+// function greet(value, cb){
+//     setTimeout(() => {
+//         console.log("hello")
+//         cb({name:value, age:16, id:1})
+//     }, 2000);
+// }
+
+// function getId(id,cb){
+//     setTimeout(() => {
+//         cb(id)
+//     }, 2000);
+
+// }
+
+// greet("hello", function getUserData({name, age, id}){
+//     console.log({
+//         name,age,id
+//     })
+
+//     getId(id, (id2)=>{
+//         console.log(id2)
+
+//         getPost(()=>{
+//             getpostid(()=>{
+
+//             })
+//         })
+//     })    
+// })
+
+
+
+// promises
+
+// resolve, reject
+
+
+// fetch()
+
+// let p1 = new Promise((resolve, reject)=>{
+//     setTimeout(() => {
+//         let result = fetch('https://randomuser.me/api/')
+
+//         if(result) return resolve(result)
+//             return reject(result)
+
+//     }, 2000);
+// })
+
+// p1.then((response)=>{
+//     return response.json()
+//     // console.log(response.json())
+// })
+// .then((data)=>{
+//     let data2 = data
+//     console.log(data2)
+    
+//     console.log(data2.results[0].name.first)
+// })
+// .catch((err)=>{
+//     console.error(err)
+// })
+
+
+// async await
+
+async function abc(){
+    try{
+        let response = await fetch('https://randomuser.me/api/')
+        let data = await response.json()
+        console.log(data.results[0].name.first)
+    }catch(err){
+        console.log(err)
+    }
 }
 
-greet("hello", function good(){
-    console.log("I am god")
-})
+abc()
